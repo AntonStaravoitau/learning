@@ -1,0 +1,230 @@
+*{
+    box-sizing: border-box;
+}
+
+
+
+
+.clearfix:after{
+    content:'';
+    display:table;
+    clear:both;
+}
+
+header{
+    width: 100%;
+    height: 822px;
+    background-image: url('img/nlJNXlMWhjs.jpg');
+    background-repeat: round;
+    padding: 1.1%  11% 2.2% 12%;
+    background-size: cover;
+}
+.head-logo {
+    width: 33%;
+    height: 123px;
+    display: inline-block;
+    background-image: url('img/logo.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.head span{
+    display: inline-block;
+    width: 17%;
+    vertical-align: top;
+    margin-top: 70px;
+    color: gray;
+}
+nav{
+    position: relative;
+    top: -30px;
+    vertical-align: 2%;
+    display: inline-block;
+    margin-left: 6.2%;
+    background: #f5c506;
+    width: 35%;
+    height: 40px;
+    box-shadow:-5px -5px 0 0  rgba(245, 197, 6, 0.5);
+}
+.material-icons {
+    font-size: 125% !important;
+    color: #b99403;
+}
+.main-menu ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.main-menu li{
+    float: left;
+    height: 40px;
+    display: inline-block;
+    border: 1px solid #b99403;
+    padding-top:  10px;
+
+    margin: 0;
+}
+.main-menu li:first-child {
+    width: 38%;
+    padding-left: 9%;
+
+}
+.main-menu li:nth-child(2) {
+    width: 29%;
+    padding-left: 3.3%;
+}
+.main-menu li:last-child {
+    width: 33%;
+    padding-left: 4.4%;
+}
+.main-menu a{
+    display: inline-block;
+    position: relative;
+    top: -3px;
+    font-size: 18px;
+    text-decoration: none;
+    color: #b99403;
+}
+iframe{
+    display: inline-block;
+    width:55.9%;
+    height:60.5%;
+    margin-left: 10px;
+    margin-top: 60px;
+}
+.head .yellow {
+    margin-top: 15%;
+    margin-left: 5%;
+    text-align: center;
+    display: inline-block;
+    color: yellow;
+    font-size: 45px;
+}
+.head .white {
+    display: inline-block;
+    margin: 0;
+    width: 100%;
+    color: white;
+    font-size: 45px;
+}
+
+.refimg ul{
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    padding: 4%;
+    list-style: none;
+    height: 318px;
+}
+.refimg li{
+    display: inline-block;
+    width: 26%;
+    height: 100%;
+    margin: 0;
+    min-width:110px;
+    min-height: 100px;
+    background-size: cover;
+
+
+}
+.refimg a{
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    font-size: 30px;
+}
+
+.lorem{
+    width: 100%;
+    height: 737px;
+    padding-top: 45px;
+    background-image: url('img/fZLLcQSJCvU.jpg');
+    background-size: cover;
+
+}
+.lorem span{
+    display: block;
+    font-size: 24px;
+    color: white;
+    margin-left: 10.7%;
+    margin-bottom: 65px;
+}
+.loremvideo{
+    display: inline-block;
+    background: #ec9e03;
+    width: 50%;
+    height: 338px;
+    margin-left: 10.7%;
+    margin-right: 2%;
+}
+.loremvideo .anotation{
+    display: inline-block;
+    vertical-align: top;
+    font-size: 20px;
+    color: white;
+    width: 50%;
+    height: 100%;
+    margin: 0;
+}
+.loremvideo iframe{
+    display: inline-block;
+    margin: 0;
+    width: 49.5%;
+    height:100%;
+}
+.lorem .twitter-icon{
+    display: inline-block;
+    height: 338px;
+    width: 25.4%;
+    color: white;
+    background: #ec9e03;
+    margin: 0px;
+    vertical-align: top;
+}
+
+.lorem2{
+    width: 100%;
+    height: 728px;
+    background-image: url("img/GHaL5ud44dc.jpg");
+    padding-top: 75px;
+    background-size: cover;
+}
+.lorem2 span{
+    display: block;
+    font-size: 24px;
+    color: yellow;
+    margin-left: 27.3%;
+    margin-bottom: 10px;
+}
+.lorem2 .lorem-logo{
+    display: inline-block;
+    width: 43.4%;
+    height: 441px;
+    margin-left: 10.7%;
+    background-size: cover;
+}
+.lorem2 ul{
+    display: inline-block;
+    width: 27%;
+    text-align: left;
+    margin-left: 85px;
+    height: 316px;
+}
+.lorem2 li {
+    color: yellow;
+    padding-top: 15px;
+    font-family: monospace;
+    font-size: 1.8em;
+    list-style-position: outside;
+    padding-right: 20px;
+}
+
+.lorem2 li span {
+    color: #9E9E9E;
+    margin-left: 0px;
+}
+
+footer{
+    box-shadow:0 -3px  2px 0 black;
+    background: #4c4c4c;
+    height: 95px;
+}
