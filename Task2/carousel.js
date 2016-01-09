@@ -1,67 +1,61 @@
 function Carousel(){
 
-    this.size = 0;
-    this.Items = [];
-    this.currentItemIndex = 0;
+    var items = [];
+    var currentItemIndex = 0;
     this.addItem = function(item){
-        this.size++;
-        this.Items.push(item);
+        items.push(item);
     }
 
     this.deleteItemId = function(id) {
-        for (var i = 0; i < this.Items.length; i++) {
+        for (var i = 0; i < this.items.length; i++) {
 
-            if (this.Items[i].id == id) {
-                this.deleteItemIndex(this.Items[i].index);
+            if (items[i].id == id) {
+                this.deleteItemIndex(items[i].index);
             }
         }
     }
     this.deleteItem = function(slide) {
-        for (var i = 0; i < this.Items.length; i++) {
-            if (this.Items[i] == slide) {
-                this.deleteItemIndex(this.Items[i].index);
+        for (var i = 0; i < items.length; i++) {
+            if (items[i] == slide) {
+                this.deleteItemIndex(items[i].index);
             }
         }
     }
     this.deleteItemIndex = function (index){
-        this.size--;
-        this.Items.splice(index,1);
+        items.splice(index,1);
         this.setNewIndexes();
 
     }
     this.showCurrItem = function(){
-        console.log(this.currentItemIndex);
-        this.Items[0].rendering();
+        items[0].rendering();
     }
     this.showNextItem = function(){
-        if(this.currentItemIndex == (this.size - 1)){
-            this.currentItemIndex = 0;
+        if(currentItemIndex == (items.length - 1)){
+            currentItemIndex = 0;
         }
         else{
-            this.currentItemIndex ++;
+            currentItemIndex ++;
         }
-        console.log(this.currentItemIndex);
-        this.Items[this.currentItemIndex].rendering();
+        items[currentItemIndex].rendering();
     }
     this.showPrevItem = function(){
-        if(this.currentItemIndex == 0){
-            this.currentItemIndex = this.size - 1;
+        if(currentItemIndex == 0){
+            currentItemIndex = items.length - 1;
         }
         else{
-            this.currentItemIndex --;
+            currentItemIndex --;
 
         }
-        console.log(this.currentItemIndex);
-        this.Items[this.currentItemIndex].rendering();
+        items[currentItemIndex].rendering();
     }
     this.setNewIndexes = function(){
-        for(var i = 0; i < this.Items.length; i++){
-            this.Items[i].changeIndex(i);
+        for(var i = 0; i < items.length; i++){
+            items[i].changeIndex(i);
         }
     }
 
     this.hiddenItemIndex = function(index){
-        this.Items[index].visibilityOff()
+        items[index].visibilityOff()
     }
     this.hiddenItemIndexRange = function(start, end){
         if(start > end){
@@ -74,23 +68,23 @@ function Carousel(){
         }
     }
     this.hiddenItemId = function(Id){
-        for (var i = 0; i < this.Items.length; i++) {
+        for (var i = 0; i < Items.length; i++) {
 
-            if (this.Items[i].id == id) {
-                this.hiddenItemIndex(this.Items[i].index);
+            if (items[i].id == id) {
+                this.hiddenItemIndex(items[i].index);
             }
         }
     }
     this.hiddenItem = function(slide) {
-        for (var i = 0; i < this.Items.length; i++) {
-            if (this.Items[i] == slide) {
-                this.hiddenItemIndex(this.Items[i].index);
+        for (var i = 0; i < items.length; i++) {
+            if (items[i] == slide) {
+                this.hiddenItemIndex(items[i].index);
             }
         }
     }
 
     this.unhiddenItemIndex = function(index){
-        this.Items[index].visibilityOn()
+        items[index].visibilityOn()
     }
     this.unhiddenItemIndexRange = function(start, end){
         if(start > end){
@@ -103,7 +97,7 @@ function Carousel(){
         }
     }
     this.unhiddenItemId = function(Id){
-        for (var i = 0; i < this.Items.length; i++) {
+        for (var i = 0; i < items.length; i++) {
 
             if (this.Items[i].id == id) {
                 this.unhiddenItemIndex(this.Items[i].index);
@@ -111,13 +105,16 @@ function Carousel(){
         }
     }
     this.unhiddenItem = function(slide) {
-        for (var i = 0; i < this.Items.length; i++) {
-            if (this.Items[i] == slide) {
-                this.unhiddenItemIndex(this.Items[i].index);
+        for (var i = 0; i < items.length; i++) {
+            if (items[i] == slide) {
+                this.unhiddenItemIndex(items[i].index);
             }
         }
     }
 
+}
+Carousel.prototype.addItem = function(item){
+    this.items.push(item);
 }
 function Slide(imgsrc, slideId, slideIndex){
 
@@ -140,12 +137,13 @@ function Slide(imgsrc, slideId, slideIndex){
         this.visible = false;
     }
 
-    this.rendering = function(){
+}
+
+    Slide.prototype.rendering = function () {
         var div = document.querySelector('#scr');
         div.innerHTML = '';
-        div.appendChild(this.elem)
+        div.appendChild(this.elem);
     }
-}
 var b = [];
 b.push( new Slide('http://www.itmathrepetitor.ru/wp-content/uploads/2015/03/JavaScript-logo.png',1,1));
 b.push( new Slide('https://camo.githubusercontent.com/891e94cd8dda7f40f451bb27067be513c230318a/68747470733a2f2f7261772e6769746875622e636f6d2f766f6f646f6f74696b69676f642f6c6f676f2e6a732f6d61737465722f626f676a732f6a732e706e67',2,2));
@@ -158,7 +156,6 @@ for(var i = 0; i < b.length; i++)
     a.addItem(b[i]);
 }
 a.showCurrItem();
-a.showNextItem();
 var left = document.querySelector('#left');
 var right = document.querySelector('#right');
 left.addEventListener("click",  a.showPrevItem.bind(a));
