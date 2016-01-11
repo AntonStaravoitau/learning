@@ -10,7 +10,7 @@ function Carousel(){
     this.getInterval = function(){
         return interval;
     }
-    this.setInterval = function(newinterval){
+    this.setNewInterval = function(newinterval){
         interval = newinterval;
     }
     this.getDirection = function(){
@@ -177,6 +177,18 @@ for(var i = 0; i < b.length; i++)
 a.setDirectionLeft();
 window.onload = function() {
     a.showCurrItem();
+};
+var left = document.querySelector('#left');
+var right = document.querySelector('#right');
+var accept = document.querySelector('#accept');
+accept.clickAccept = function(){
+    a.setNewInterval(document.querySelector('#interval').value)
+    if(document.getElementsByName('direction')[0].checked == true){
+        a.setDirectionRight()
+    }
+    else{
+        a.setDirectionLeft()
+    }
     setInterval(function() {
         if(a.getDirection()==1){
             a.showNextItem();
@@ -186,7 +198,7 @@ window.onload = function() {
         }
     }, a.getInterval());
 };
-var left = document.querySelector('#left');
-var right = document.querySelector('#right');
 left.addEventListener("click",  a.showPrevItem.bind(a));
 right.addEventListener("click", a.showNextItem.bind(a));
+accept.addEventListener("click", accept.clickAccept);
+
