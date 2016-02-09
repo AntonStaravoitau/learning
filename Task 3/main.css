@@ -1,0 +1,199 @@
+/*///////////////////////////////////////////header///////////////////////////////////////////////*/
+header .temp-background {
+    width: 100%;
+    height: auto;
+}
+/*///////////////////////////////////////text about us///////////////////////////////////////////////*/
+#about-us {
+    display: flex;
+    width: 100%;
+    height: auto;
+    background-color: rgb(255,255,255);
+    flex-direction: column;
+    align-items: center;
+}
+
+#about-us h1{
+    margin-top: 80px;
+    text-transform: uppercase;
+    color: rgb(212,175,55);
+    font-size: 2rem;
+}
+
+#about-us h2{
+    margin-top: 25px;
+    margin-bottom: 60px;
+    font-size: 5em;
+    text-transform: capitalize;
+    color: rgb(77,92,102);
+}
+
+.short-text-about-us, .who-we-are-text{
+    width: 60%;
+    height: auto;
+    font-size: 2rem;
+    color: rgb(2,23,37);
+    text-align: center;
+}
+
+.more-about-us{
+    margin-top: 50px;
+    margin-bottom: 80px;
+    width: 19%;
+    height: auto;
+    min-height: 55px;
+    background-color: rgba(0,0,0,0);
+}
+
+/*///////////////////////////////////////Our Works///////////////////////////////////////////////////////////////*/
+
+#our-works{
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin: 80px 0;
+    flex-grow: 1;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: center;
+}
+#our-works img{
+    width: 24.9%;
+    min-width: 300px;
+    height: auto;
+    margin: auto;
+
+}
+
+/*///////////////////////////////////////Persons///////////////////////////////////////////////////////////////*/
+
+#persons{
+    display: flex;
+    margin-bottom: 80px;
+    width: 60%;
+    height: auto;
+    flex-direction: row;
+    margin-top: 50px;
+    flex: 0 1 auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.person-about{
+    width: 33%;
+    min-width: 250px;
+    background-color: rgb(249,249,249);
+    margin: 1px;
+}
+.person-about .person-photo {
+    width: 100%;
+    height: auto;
+}
+.person-about .position {
+    text-align: center;
+    text-transform: uppercase;
+    color: rgb(212,175,55);
+    font-size: 2rem;
+}
+.person-about .name {
+    text-align: start;
+    font-size: 3em;
+    text-transform: capitalize;
+    color: rgb(77,92,102)
+}
+.person-about .about {
+    text-align: start;
+    font-size: 1.5em;
+    color: rgb(77,92,102)
+}
+
+/*///////////////////////////////////////Post///////////////////////////////////////////////////////////////*/
+
+#post {
+    display: flex;
+    width: 60%;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+.post-image{
+    width: 50%;
+    height: auto;
+}
+.post-description{
+    box-sizing: border-box;
+    background-color: rgb(249,249,249);
+    align-self: stretch;
+    padding: 5% 5%;
+}
+.post-date {
+    color: rgb(77,92,102);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.post-header {
+    color: rgb(77,92,102);
+    font-size: 3rem;
+    margin: 0 auto 40px auto;
+}
+.post-short-text{
+    color: rgb(77,92,102);
+    font-size: 1rem;
+    margin-bottom: 15%;
+}
+.button-for-show-post{
+    width: 34%;
+    margin-left: 33%;
+    height: auto;
+    min-height: 30px;
+    background-color: rgba(0,0,0,0);
+}
+
+/*///////////////////////////////////////Contacts///////////////////////////////////////////////////////////////*/
+#contacts {
+    display: flex;
+    background-color: rgb(249,249,249);
+    width: 60%;
+    height: auto;
+    flex-direction: row;
+    flex: 0 1 auto;
+    flex-wrap: wrap;
+    color: rgb(77,92,102);;
+    margin-bottom: 80px;
+
+}
+.contacts-map {
+    width: 100%;
+    height: auto;
+}
+.contact{
+    min-width: 35%;
+    margin: 0 auto 50px auto;
+    text-align: center;
+}
+.contact-type{
+    margin: 50px 0;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+.contact-information{
+    font-size: 1.5em;
+    margin: 10px;
+}
+
+/*///////////////////////////////////////Footer///////////////////////////////////////////////////////////////*/
+.footer{
+    display: flex;
+    background-color: rgb(238,238,238);
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 50px;
+}
+.footer p{
+    color: rgb(77,92,102);
+    font-size: 2rem;
+    margin: 0 auto;
+}
