@@ -1,0 +1,51 @@
+#main {
+    position:relative;
+    margin: 5px auto;
+    padding: 5px;
+    width: 660px;
+    height:360px;
+    background-color: silver;
+    border: 5px solid grey;
+    border-radius:15px;
+}
+#scr {
+    margin:20px auto;
+    width: 600px;
+    height: 320px;
+    background-color: white;
+    background-size:cover;
+    border: 2px solid black;
+    border-radius:10px;
+}
+button {
+    position: absolute;
+    top: 150px;
+    width: 25px;
+    height: 70px;
+    font: 12pt arial,tahoma,sans-serif;
+    text-align: center;
+}
+#left {
+    left:5px;
+}
+#right {
+    right:5px;
+}
+#autoslide{
+    margin: 5px auto;
+    padding: 5px;
+    width: 330px;
+    height: auto;
+    border: 5px solid grey;
+    border-radius:15px;
+}
+#interval{
+    margin: 0 auto;
+    width: 50px;
+}
+#accept{
+    position: inherit;
+    width: auto;
+    height: auto;
+    margin: 10px 115px;
+}
